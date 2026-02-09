@@ -1,0 +1,9 @@
+[build]
+# Use incremental compilation for faster rebuilds
+incremental = true
+
+[profile.dev]
+# Minimal debug info - speeds up linking significantly
+debug = 0
+# Skip optimizing dependencies too
+opt-level = 0

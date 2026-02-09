@@ -1,0 +1,18 @@
+[package]
+name = "httpbin-handlers"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+regex = { workspace = true }
+base64 = "0.21"
+uuid = { version = "1.0", features = ["v4"] }
+rand = "0.8"
+flate2 = "1.0"
+brotli = "3.3"
+md-5 = "0.10"
+sha2 = "0.10"
+hex = "0.4"

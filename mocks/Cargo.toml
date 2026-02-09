@@ -1,0 +1,9 @@
+[package]
+name = "httpbin-mocks"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+httpbin-handlers = { path = "../handlers" }
+orb-mockhttp = "0.1.0"
+http = "1.0"  # For http::Version

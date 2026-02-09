@@ -1,0 +1,15 @@
+[package]
+name = "httpbin-server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "httpbin-server"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+anyhow = { workspace = true }
+httpbin-handlers = { path = "../handlers" }
+httpbin-mocks = { path = "../mocks" }
+orb-mockhttp = "0.1.0"
