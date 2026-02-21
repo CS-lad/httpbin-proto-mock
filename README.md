@@ -51,37 +51,37 @@ make clean
 
 The server starts on 8080 and prints the URL:
 ```
-Server ready at: https://127.0.0.1:<PORT>/
+Server ready at: https://127.0.0.1:8080/
 ```
 
 ## Testing Endpoints
 
 ### Protocol-agnostic (works with any HTTP version)
 ```bash
-curl -k https://127.0.0.1:<PORT>/get
-curl -k https://127.0.0.1:<PORT>/status/200
-curl -k https://127.0.0.1:<PORT>/uuid
-curl -k -X POST https://127.0.0.1:<PORT>/post
+curl -k https://127.0.0.1:8080/get
+curl -k https://127.0.0.1:8080/status/200
+curl -k https://127.0.0.1:8080/uuid
+curl -k -X POST https://127.0.0.1:8080/post
 ```
 
 ### HTTP/1.1-only (use --http1.1)
 ```bash
-curl -k --http1.1 https://127.0.0.1:<PORT>/h1/get          # 200 OK
-curl -k --http1.1 https://127.0.0.1:<PORT>/h1/status/200    # 200 OK
-curl -k https://127.0.0.1:<PORT>/h1/get                     # 421 Misdirected Request
+curl -k --http1.1 https://127.0.0.1:8080/h1/get          # 200 OK
+curl -k --http1.1 https://127.0.0.1:8080/h1/status/200    # 200 OK
+curl -k https://127.0.0.1:8080/h1/get                     # 421 Misdirected Request
 ```
 
 ### HTTP/2-only (curl defaults to HTTP/2)
 ```bash
-curl -k https://127.0.0.1:<PORT>/h2/get                     # 200 OK
-curl -k https://127.0.0.1:<PORT>/h2/status/200               # 200 OK
-curl -k --http1.1 https://127.0.0.1:<PORT>/h2/get            # 421 Misdirected Request
+curl -k https://127.0.0.1:8080/h2/get                     # 200 OK
+curl -k https://127.0.0.1:8080/h2/status/200               # 200 OK
+curl -k --http1.1 https://127.0.0.1:8080/h2/get            # 421 Misdirected Request
 ```
 
 ### HTTP/3-only (requires HTTP/3-enabled curl)
 ```bash
-curl -k --http3 https://127.0.0.1:<PORT>/h3/get              # 200 OK
-curl -k https://127.0.0.1:<PORT>/h3/get                      # 421 Misdirected Request
+curl -k --http3 https://127.0.0.1:8080/h3/get              # 200 OK
+curl -k https://127.0.0.1:8080/h3/get                      # 421 Misdirected Request
 ```
 
 ## Available Endpoints
