@@ -49,7 +49,7 @@ make quick
 make clean
 ```
 
-The server starts on a random port and prints the URL:
+The server starts on 8080 and prints the URL:
 ```
 Server ready at: https://127.0.0.1:<PORT>/
 ```
